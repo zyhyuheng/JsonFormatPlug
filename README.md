@@ -1,0 +1,2 @@
+# JsonFormatPlug
+Eclipse对选中的字符串进行json格式化
