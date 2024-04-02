@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: JsonFormatPlug
+Bundle-SymbolicName: JsonFormatPlug;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.ui.editors;bundle-version="3.12.0",
+ org.eclipse.jface.text;bundle-version="3.15.300"
+Automatic-Module-Name: JsonFormatPlug
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-ClassPath: .,
+ lib/fastjson-1.2.83.jar

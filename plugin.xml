@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         point="org.eclipse.ui.commands">
+      <command
+        id="JsonFormatPlug.commands.formatJsonCommand"
+        name="Format JSON">
+  </command>
+   </extension>
+   <extension
+         point="org.eclipse.ui.handlers">
+      <handler
+            class="jsonformatplug.handlers.FormatJsonHandler"
+            commandId="JsonFormatPlug.commands.formatJsonCommand">
+      </handler>
+   </extension>
+   <extension
+         point="org.eclipse.ui.bindings">
+      <key
+            commandId="JsonFormatPlug.commands.formatJsonCommand"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
+            contextId="org.eclipse.ui.contexts.window"
+            sequence="M1+6">
+      </key>
+   </extension>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+        allPopups="false"
+        locationURI="popup:org.eclipse.ui.popup.any">
+     <menu
+           id="JsonFormatPlug.menus.formatJsonMenu"
+           label="JSON Formatter"
+           mnemonic="M">
+        <command
+              commandId="JsonFormatPlug.commands.formatJsonCommand"
+              label="Format JSON"
+              style="push">
+        </command>
+     </menu>
+  </menuContribution>
+  <menuContribution
+            locationURI="toolbar:org.eclipse.ui.main.toolbar?after=additions">
+         <toolbar
+               id="JsonFormatPlug.toolbars.formatJsonToolbar">
+            <command
+                  id="JsonFormatPlug.toolbars.formatJsonCommand"
+                  commandId="JsonFormatPlug.commands.formatJsonCommand"
+                  icon="icons/json.png"
+                  tooltip="Format JSON">
+            </command>
+         </toolbar>
+      </menuContribution>
+   </extension>
+   
+
+</plugin>
